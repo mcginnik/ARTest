@@ -28,26 +28,10 @@ struct MainView: View {
     }
     
     var closeButton: some View {
-        VStack {
-            HStack {
-                Spacer()
-                Button {
-                    showCapturedImage.toggle()
-                } label: {
-                    Image(systemName: ImageConstants.xmark)
-                        .foregroundColor(.white)
-                        .shadow(color: .black, radius: 1)
-                        .font(.title)
-                        .padding()
-                }
-                .frame(width: 50, height: 50)
-            }
-            .padding(.top, 20)
-            Spacer()
-        }
+        CloseButtonView(shouldDisplay: $showCapturedImage)
     }
     
-    var buttonHud: some View {
+    var bottomHUD: some View {
         VStack {
             CameraButtonView {
                 viewModel.didTapCameraButton()
@@ -77,7 +61,7 @@ struct MainView: View {
         } else {
             ZStack(alignment: .bottom) {
                 ARViewContainer(arViewModel: viewModel.arViewModel)
-                buttonHud
+                bottomHUD
             }
             .fullScreenCover(isPresented: $showCapturedImage, content: {
                 capturedImageModal

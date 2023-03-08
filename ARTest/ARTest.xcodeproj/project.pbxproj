@@ -33,6 +33,7 @@
 		A78D657529B8C60100AF95F6 /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78D657429B8C60100AF95F6 /* ARViewModel.swift */; };
 		A78D657729B8CF7300AF95F6 /* CameraButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78D657629B8CF7300AF95F6 /* CameraButtonView.swift */; };
 		A78D657A29B8E0D000AF95F6 /* SceneAssetConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78D657929B8E0D000AF95F6 /* SceneAssetConstants.swift */; };
+		A78D658029B8FF8300AF95F6 /* CloseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78D657F29B8FF8300AF95F6 /* CloseButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		A78D657429B8C60100AF95F6 /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
 		A78D657629B8CF7300AF95F6 /* CameraButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonView.swift; sourceTree = "<group>"; };
 		A78D657929B8E0D000AF95F6 /* SceneAssetConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAssetConstants.swift; sourceTree = "<group>"; };
+		A78D657F29B8FF8300AF95F6 /* CloseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 				A721EB2029B80A7800CED54C /* AssetPickerView.swift */,
 				A76830F429B6C1FE00E93E84 /* ARView */,
 				A76830F129B6C04C00E93E84 /* Extensions */,
+				A78D657F29B8FF8300AF95F6 /* CloseButtonView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				A76830B129B6BB1200E93E84 /* AppDelegate.swift in Sources */,
 				A78D657A29B8E0D000AF95F6 /* SceneAssetConstants.swift in Sources */,
 				A78D657529B8C60100AF95F6 /* ARViewModel.swift in Sources */,
+				A78D658029B8FF8300AF95F6 /* CloseButtonView.swift in Sources */,
 				A721EB1D29B807E100CED54C /* MockSceneAssetService.swift in Sources */,
 				A721EB1C29B807E100CED54C /* SceneAssetService.swift in Sources */,
 				A76830ED29B6BF2600E93E84 /* MainView.swift in Sources */,
