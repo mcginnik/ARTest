@@ -10,6 +10,8 @@ import RealityKit
 
 class SceneAssetViewModel: ObservableObject {
     
+    // MARK: Properties
+    
     let asset: SceneAsset
     
     @Published var model: ModelEntity?
@@ -30,6 +32,8 @@ class SceneAssetViewModel: ObservableObject {
         return asset.imageName
     }
     
+    // MARK: Lifecycle
+    
     init(withAsset asset: SceneAsset, model: ModelEntity?){
         self.asset = asset
         self.model = model
@@ -37,6 +41,7 @@ class SceneAssetViewModel: ObservableObject {
     
 }
 
+// MARK: Hashable & Identifiable Conformance
 extension SceneAssetViewModel: Hashable, Identifiable {
     
     static func == (lhs: SceneAssetViewModel, rhs: SceneAssetViewModel) -> Bool {
@@ -46,6 +51,5 @@ extension SceneAssetViewModel: Hashable, Identifiable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
-    
     
 }

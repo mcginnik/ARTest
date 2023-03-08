@@ -12,8 +12,10 @@ import SceneKit
 
 class MainViewModel: ObservableObject {
     
-    @Published var isLoading: Bool = false
     
+    // MARK: Properties
+    
+    @Published var isLoading: Bool = false
     @Published var assets: [SceneAssetViewModel] = []
     @Published var assetSet: Set<SceneAssetViewModel> = [] {
         didSet {
@@ -21,11 +23,21 @@ class MainViewModel: ObservableObject {
         }
     }
 
-    @Published var currentSelection: SceneAssetViewModel?
+    @Published var currentSelection: SceneAssetViewModel? {
+        didSet {
+            arViewModel.setModelForPlacement(currentSelection?.model)
+        }
+    }
     
+    @Published var arViewModel: ARViewModel = ARViewModel(modelForPlacement: nil)
+    
+    // MARK: Lifecycle
+
     init(){
         fetchAssets()
     }
+    
+    // MARK: API
     
     private func fetchAssets(){
         self.isLoading = true
@@ -53,9 +65,4 @@ class MainViewModel: ObservableObject {
         }
     }
     
-    
 }
-
-//extension MainViewModel: ARViewDelegate {
-//    
-//}

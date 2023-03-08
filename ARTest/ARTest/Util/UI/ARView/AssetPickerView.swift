@@ -45,8 +45,8 @@ struct AssetPickerView: View {
 struct AssetPickerView_Previews: PreviewProvider {
     static var previews: some View {
         let vm = SceneAssetViewModel(withAsset: .init(id: "0001",
-                                                         name: "Toy Car",
-                                                         imageName: "toy_car",
+                                                      name: "Toy Car",
+                                                      imageName: "toy_car",
                                                       modelName: "toy_car.usdz"),
                                      model: nil)
         

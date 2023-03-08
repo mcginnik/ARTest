@@ -11,6 +11,8 @@ import Combine
 
 class MockSceneAssetService: SceneAssetServiceProtocol {
     
+    // MARK: Properties
+    
     let testAssets: [SceneAsset] = [
         .init(id: "0001", name: "Toy Car", imageName: "toy_car", modelName: "SceneAssets.scnassets/toy_car.usdz"),
         .init(id: "0002", name: "Caramel Sauce", imageName: "caramel_sauce", modelName: "SceneAssets.scnassets/caramel_sauce.usdz"),
@@ -18,6 +20,8 @@ class MockSceneAssetService: SceneAssetServiceProtocol {
     ]
     
     private var cancellables = Set<AnyCancellable>()
+    
+    // MARK: API
     
     func fetchModelEntity(withID id: AssetID, completion: @escaping (Result<ModelEntity, Error>) -> Void) {
         Logging.LogMe("... \(id), ")

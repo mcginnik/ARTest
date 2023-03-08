@@ -9,5 +9,6 @@ import Foundation
 
 struct StringConstants {
     
-    static let ARTitle = "AR"
+    static let MainTitle = "Add Objects"
+    
 }

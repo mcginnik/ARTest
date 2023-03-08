@@ -9,11 +9,15 @@ import SwiftUI
 
 class MainViewController: UIViewController {
     
+    // MARK: Properties
+
     var viewModel: MainViewModel = MainViewModel()
     
     var navTitle: String {
-        StringConstants.ARTitle
+        StringConstants.MainTitle
     }
+    
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +27,11 @@ class MainViewController: UIViewController {
         setupHostingVC()
     }
     
+    // MARK: View Helpers
+    
     private func setupNavBar(){
         title = navTitle
-        navigationController?.navigationBar.isHidden = true
+//        navigationController?.navigationBar.isHidden = true
     }
     
     private func setupHostingVC(){

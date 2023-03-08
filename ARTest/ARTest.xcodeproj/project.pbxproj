@@ -21,7 +21,6 @@
 		A76830C829B6BB1400E93E84 /* ARTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830C729B6BB1400E93E84 /* ARTestTests.swift */; };
 		A76830D229B6BB1400E93E84 /* ARTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830D129B6BB1400E93E84 /* ARTestUITests.swift */; };
 		A76830D429B6BB1400E93E84 /* ARTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830D329B6BB1400E93E84 /* ARTestUITestsLaunchTests.swift */; };
-		A76830E829B6BD3600E93E84 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830E729B6BD3600E93E84 /* ARView.swift */; };
 		A76830EB29B6BE6700E93E84 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830EA29B6BE6700E93E84 /* StringConstants.swift */; };
 		A76830ED29B6BF2600E93E84 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830EC29B6BF2600E93E84 /* MainView.swift */; };
 		A76830EF29B6BF9800E93E84 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830EE29B6BF9800E93E84 /* MainViewModel.swift */; };
@@ -30,6 +29,8 @@
 		A768314329B6C7FE00E93E84 /* ARConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768314229B6C7FE00E93E84 /* ARConstants.swift */; };
 		A768314629B6C99300E93E84 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768314529B6C99300E93E84 /* Logging.swift */; };
 		A768314929B6CA5800E93E84 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768314829B6CA5800E93E84 /* AppConfig.swift */; };
+		A78D657229B8C58A00AF95F6 /* ARView+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78D657129B8C58A00AF95F6 /* ARView+Config.swift */; };
+		A78D657529B8C60100AF95F6 /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78D657429B8C60100AF95F6 /* ARViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,6 @@
 		A76830CD29B6BB1400E93E84 /* ARTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76830D129B6BB1400E93E84 /* ARTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTestUITests.swift; sourceTree = "<group>"; };
 		A76830D329B6BB1400E93E84 /* ARTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A76830E729B6BD3600E93E84 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		A76830EA29B6BE6700E93E84 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		A76830EC29B6BF2600E93E84 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A76830EE29B6BF9800E93E84 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -77,6 +77,8 @@
 		A768314229B6C7FE00E93E84 /* ARConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARConstants.swift; sourceTree = "<group>"; };
 		A768314529B6C99300E93E84 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		A768314829B6CA5800E93E84 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		A78D657129B8C58A00AF95F6 /* ARView+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARView+Config.swift"; sourceTree = "<group>"; };
+		A78D657429B8C60100AF95F6 /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,9 +276,10 @@
 		A76830F429B6C1FE00E93E84 /* ARView */ = {
 			isa = PBXGroup;
 			children = (
+				A78D657329B8C5F100AF95F6 /* ViewModel */,
+				A78D657029B8C57E00AF95F6 /* Extensions */,
 				A721EB2029B80A7800CED54C /* AssetPickerView.swift */,
 				A721EB2229B80BA600CED54C /* ARViewContainer.swift */,
-				A76830E729B6BD3600E93E84 /* ARView.swift */,
 			);
 			path = ARView;
 			sourceTree = "<group>";
@@ -295,6 +298,22 @@
 				A768314829B6CA5800E93E84 /* AppConfig.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		A78D657029B8C57E00AF95F6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A78D657129B8C58A00AF95F6 /* ARView+Config.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A78D657329B8C5F100AF95F6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A78D657429B8C60100AF95F6 /* ARViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A7FCBE5C29B7FFDA00B7A6E4 /* Model */ = {
@@ -437,8 +456,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A76830B529B6BB1200E93E84 /* MainViewController.swift in Sources */,
-				A76830E829B6BD3600E93E84 /* ARView.swift in Sources */,
+				A78D657229B8C58A00AF95F6 /* ARView+Config.swift in Sources */,
 				A76830B129B6BB1200E93E84 /* AppDelegate.swift in Sources */,
+				A78D657529B8C60100AF95F6 /* ARViewModel.swift in Sources */,
 				A721EB1D29B807E100CED54C /* MockSceneAssetService.swift in Sources */,
 				A721EB1C29B807E100CED54C /* SceneAssetService.swift in Sources */,
 				A76830ED29B6BF2600E93E84 /* MainView.swift in Sources */,
