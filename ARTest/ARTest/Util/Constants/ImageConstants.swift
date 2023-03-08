@@ -13,4 +13,6 @@ struct ImageConstants {
     static let caramelSauce = "caramel_sauce"
     static let toyDrummer = "toy_drummer"
     
+    static let xmark = "xmark"
+    
 }

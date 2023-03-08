@@ -16,26 +16,30 @@ class ARViewModel: ObservableObject {
     private (set) var modelForPlacement: ModelEntity?
     var allowCloning: Bool
     var allowTransformation: Bool
+    var didCaptureScene: (UIImage) -> Void
     
     // MARK: Lifecycle
     
     init(arView: ARView = .init(frame: .zero),
          modelForPlacement: ModelEntity?,
          allowCloning: Bool = true,
-         allowTransformation: Bool  = true) {
+         allowTransformation: Bool  = true,
+         didCaptureScene: @escaping (UIImage) -> Void = { _ in }) {
         self.arView = arView
         self.modelForPlacement =  modelForPlacement
         self.allowCloning = allowCloning
         self.allowTransformation = allowTransformation
+        self.didCaptureScene = didCaptureScene
     }
     
     // MARK: API
     
     func captureScene(){
         Logging.LogMe("...")
-        arView.snapshot(saveToHDR: true) { image in
+        arView.snapshot(saveToHDR: true) { [weak self] image in
             if let image = image {
                 UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                self?.didCaptureScene(image)
             }
         }
     }

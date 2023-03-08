@@ -24,6 +24,7 @@ class MainViewModel: ObservableObject {
             }
         }
     }
+    @Published var capturedImage: UIImage?
 
     @Published var currentSelection: SceneAssetViewModel? {
         didSet {
@@ -37,6 +38,10 @@ class MainViewModel: ObservableObject {
 
     init(){
         fetchAssets()
+        
+        arViewModel.didCaptureScene = { [weak self] image in
+            self?.capturedImage = image
+        }
     }
     
     // MARK: API
