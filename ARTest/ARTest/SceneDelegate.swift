@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         /// 4. Set the root view controller of the window with your view controller
-        window.rootViewController = UINavigationController(rootViewController: CameraViewController())
+        window.rootViewController = UINavigationController(rootViewController: MainViewController())
         /// 5. Set the window and call makeKeyAndVisible()
         self.window = window
         window.makeKeyAndVisible()
@@ -66,14 +66,14 @@ extension SceneDelegate {
     /// These would ideally not be setup this way but injected with a DI service that confirms that each one has a value at compilation time... I already have a setup for this that I built and there are other solutions out there..  For now just injecting them manually here
     private func injectServices(){
         injectCameraService()
-        injectSceneService()
+        injectSceneAssetService()
     }
     
     private func injectCameraService() {
         //
     }
     
-    private func injectSceneService() {
-        SceneService.setup(with: MockSceneService())
+    private func injectSceneAssetService() {
+        SceneAssetService.setup(with: MockSceneAssetService())
     }
 }

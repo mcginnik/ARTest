@@ -9,5 +9,4 @@ import Foundation
 
 struct ARConstants {
     
-    static let testScene = "SceneAssets.scnassets/model.usdz"
 }

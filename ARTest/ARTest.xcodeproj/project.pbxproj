@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A721EB1029B8005A00CED54C /* SceneAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721EB0F29B8005A00CED54C /* SceneAsset.swift */; };
+		A721EB1B29B807E100CED54C /* SceneAssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721EB1629B807E100CED54C /* SceneAssetViewModel.swift */; };
+		A721EB1C29B807E100CED54C /* SceneAssetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721EB1829B807E100CED54C /* SceneAssetService.swift */; };
+		A721EB1D29B807E100CED54C /* MockSceneAssetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721EB1A29B807E100CED54C /* MockSceneAssetService.swift */; };
+		A721EB2129B80A7800CED54C /* AssetPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721EB2029B80A7800CED54C /* AssetPickerView.swift */; };
+		A721EB2329B80BA600CED54C /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721EB2229B80BA600CED54C /* ARViewContainer.swift */; };
 		A76830B129B6BB1200E93E84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830B029B6BB1200E93E84 /* AppDelegate.swift */; };
 		A76830B329B6BB1200E93E84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830B229B6BB1200E93E84 /* SceneDelegate.swift */; };
-		A76830B529B6BB1200E93E84 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830B429B6BB1200E93E84 /* CameraViewController.swift */; };
+		A76830B529B6BB1200E93E84 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830B429B6BB1200E93E84 /* MainViewController.swift */; };
 		A76830BA29B6BB1400E93E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76830B929B6BB1400E93E84 /* Assets.xcassets */; };
 		A76830BD29B6BB1400E93E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76830BB29B6BB1400E93E84 /* LaunchScreen.storyboard */; };
 		A76830C829B6BB1400E93E84 /* ARTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830C729B6BB1400E93E84 /* ARTestTests.swift */; };
@@ -17,12 +23,10 @@
 		A76830D429B6BB1400E93E84 /* ARTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830D329B6BB1400E93E84 /* ARTestUITestsLaunchTests.swift */; };
 		A76830E829B6BD3600E93E84 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830E729B6BD3600E93E84 /* ARView.swift */; };
 		A76830EB29B6BE6700E93E84 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830EA29B6BE6700E93E84 /* StringConstants.swift */; };
-		A76830ED29B6BF2600E93E84 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830EC29B6BF2600E93E84 /* CameraView.swift */; };
-		A76830EF29B6BF9800E93E84 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830EE29B6BF9800E93E84 /* CameraViewModel.swift */; };
+		A76830ED29B6BF2600E93E84 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830EC29B6BF2600E93E84 /* MainView.swift */; };
+		A76830EF29B6BF9800E93E84 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830EE29B6BF9800E93E84 /* MainViewModel.swift */; };
 		A76830F329B6C05A00E93E84 /* UIViewController+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76830F229B6C05A00E93E84 /* UIViewController+Add.swift */; };
 		A768313929B6C4BC00E93E84 /* SceneAssets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A768313829B6C4BC00E93E84 /* SceneAssets.scnassets */; };
-		A768313F29B6C66200E93E84 /* SceneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768313E29B6C66200E93E84 /* SceneService.swift */; };
-		A768314129B6C69000E93E84 /* MockSceneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768314029B6C69000E93E84 /* MockSceneService.swift */; };
 		A768314329B6C7FE00E93E84 /* ARConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768314229B6C7FE00E93E84 /* ARConstants.swift */; };
 		A768314629B6C99300E93E84 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768314529B6C99300E93E84 /* Logging.swift */; };
 		A768314929B6CA5800E93E84 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768314829B6CA5800E93E84 /* AppConfig.swift */; };
@@ -46,10 +50,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A721EB0F29B8005A00CED54C /* SceneAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAsset.swift; sourceTree = "<group>"; };
+		A721EB1629B807E100CED54C /* SceneAssetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneAssetViewModel.swift; sourceTree = "<group>"; };
+		A721EB1829B807E100CED54C /* SceneAssetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneAssetService.swift; sourceTree = "<group>"; };
+		A721EB1A29B807E100CED54C /* MockSceneAssetService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSceneAssetService.swift; sourceTree = "<group>"; };
+		A721EB2029B80A7800CED54C /* AssetPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetPickerView.swift; sourceTree = "<group>"; };
+		A721EB2229B80BA600CED54C /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		A76830AD29B6BB1200E93E84 /* ARTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76830B029B6BB1200E93E84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A76830B229B6BB1200E93E84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A76830B429B6BB1200E93E84 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A76830B429B6BB1200E93E84 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A76830B929B6BB1400E93E84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A76830BC29B6BB1400E93E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A76830BE29B6BB1400E93E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,12 +70,10 @@
 		A76830D329B6BB1400E93E84 /* ARTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A76830E729B6BD3600E93E84 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		A76830EA29B6BE6700E93E84 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
-		A76830EC29B6BF2600E93E84 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		A76830EE29B6BF9800E93E84 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		A76830EC29B6BF2600E93E84 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A76830EE29B6BF9800E93E84 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A76830F229B6C05A00E93E84 /* UIViewController+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Add.swift"; sourceTree = "<group>"; };
 		A768313829B6C4BC00E93E84 /* SceneAssets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = SceneAssets.scnassets; sourceTree = "<group>"; };
-		A768313E29B6C66200E93E84 /* SceneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneService.swift; sourceTree = "<group>"; };
-		A768314029B6C69000E93E84 /* MockSceneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSceneService.swift; sourceTree = "<group>"; };
 		A768314229B6C7FE00E93E84 /* ARConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARConstants.swift; sourceTree = "<group>"; };
 		A768314529B6C99300E93E84 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		A768314829B6CA5800E93E84 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
@@ -96,6 +104,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A721EB1429B807E100CED54C /* SceneAsset */ = {
+			isa = PBXGroup;
+			children = (
+				A721EB1729B807E100CED54C /* API */,
+				A721EB1529B807E100CED54C /* ViewModel */,
+			);
+			path = SceneAsset;
+			sourceTree = "<group>";
+		};
+		A721EB1529B807E100CED54C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A721EB1629B807E100CED54C /* SceneAssetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A721EB1729B807E100CED54C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A721EB1929B807E100CED54C /* MockSceneAssetService */,
+				A721EB1829B807E100CED54C /* SceneAssetService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A721EB1929B807E100CED54C /* MockSceneAssetService */ = {
+			isa = PBXGroup;
+			children = (
+				A721EB1A29B807E100CED54C /* MockSceneAssetService.swift */,
+			);
+			path = MockSceneAssetService;
+			sourceTree = "<group>";
+		};
 		A76830A429B6BB1200E93E84 = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +167,8 @@
 				A768313829B6C4BC00E93E84 /* SceneAssets.scnassets */,
 				A76830BB29B6BB1400E93E84 /* LaunchScreen.storyboard */,
 				A768314729B6CA4800E93E84 /* Config */,
-				A76830E029B6BCBE00E93E84 /* Main */,
+				A76830E029B6BCBE00E93E84 /* In-App */,
+				A7FCBE5C29B7FFDA00B7A6E4 /* Model */,
 				A76830E129B6BCCC00E93E84 /* Util */,
 				A76830BE29B6BB1400E93E84 /* Info.plist */,
 			);
@@ -149,13 +192,13 @@
 			path = ARTestUITests;
 			sourceTree = "<group>";
 		};
-		A76830E029B6BCBE00E93E84 /* Main */ = {
+		A76830E029B6BCBE00E93E84 /* In-App */ = {
 			isa = PBXGroup;
 			children = (
-				A768313B29B6C63200E93E84 /* Scene */,
-				A76830E229B6BCD500E93E84 /* Camera */,
+				A721EB1429B807E100CED54C /* SceneAsset */,
+				A76830E229B6BCD500E93E84 /* Main */,
 			);
-			path = Main;
+			path = "In-App";
 			sourceTree = "<group>";
 		};
 		A76830E129B6BCCC00E93E84 /* Util */ = {
@@ -168,20 +211,20 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		A76830E229B6BCD500E93E84 /* Camera */ = {
+		A76830E229B6BCD500E93E84 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				A76830E529B6BCFD00E93E84 /* ViewModel */,
 				A76830E429B6BCFA00E93E84 /* View */,
 				A76830E329B6BCF500E93E84 /* Controller */,
 			);
-			path = Camera;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		A76830E329B6BCF500E93E84 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A76830B429B6BB1200E93E84 /* CameraViewController.swift */,
+				A76830B429B6BB1200E93E84 /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,7 +232,7 @@
 		A76830E429B6BCFA00E93E84 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A76830EC29B6BF2600E93E84 /* CameraView.swift */,
+				A76830EC29B6BF2600E93E84 /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,19 +240,9 @@
 		A76830E529B6BCFD00E93E84 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A76830EE29B6BF9800E93E84 /* CameraViewModel.swift */,
+				A76830EE29B6BF9800E93E84 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		A76830E629B6BD0200E93E84 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				A768313A29B6C61500E93E84 /* MockSceneService */,
-				A768313E29B6C66200E93E84 /* SceneService.swift */,
-			);
-			name = API;
-			path = ../Camera/API;
 			sourceTree = "<group>";
 		};
 		A76830E929B6BE5C00E93E84 /* Constants */ = {
@@ -241,25 +274,11 @@
 		A76830F429B6C1FE00E93E84 /* ARView */ = {
 			isa = PBXGroup;
 			children = (
+				A721EB2029B80A7800CED54C /* AssetPickerView.swift */,
+				A721EB2229B80BA600CED54C /* ARViewContainer.swift */,
 				A76830E729B6BD3600E93E84 /* ARView.swift */,
 			);
 			path = ARView;
-			sourceTree = "<group>";
-		};
-		A768313A29B6C61500E93E84 /* MockSceneService */ = {
-			isa = PBXGroup;
-			children = (
-				A768314029B6C69000E93E84 /* MockSceneService.swift */,
-			);
-			path = MockSceneService;
-			sourceTree = "<group>";
-		};
-		A768313B29B6C63200E93E84 /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				A76830E629B6BD0200E93E84 /* API */,
-			);
-			path = Scene;
 			sourceTree = "<group>";
 		};
 		A768314429B6C98B00E93E84 /* Logging */ = {
@@ -276,6 +295,14 @@
 				A768314829B6CA5800E93E84 /* AppConfig.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		A7FCBE5C29B7FFDA00B7A6E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A721EB0F29B8005A00CED54C /* SceneAsset.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,19 +436,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A76830B529B6BB1200E93E84 /* CameraViewController.swift in Sources */,
+				A76830B529B6BB1200E93E84 /* MainViewController.swift in Sources */,
 				A76830E829B6BD3600E93E84 /* ARView.swift in Sources */,
 				A76830B129B6BB1200E93E84 /* AppDelegate.swift in Sources */,
-				A76830ED29B6BF2600E93E84 /* CameraView.swift in Sources */,
-				A768313F29B6C66200E93E84 /* SceneService.swift in Sources */,
-				A768314129B6C69000E93E84 /* MockSceneService.swift in Sources */,
-				A76830EF29B6BF9800E93E84 /* CameraViewModel.swift in Sources */,
+				A721EB1D29B807E100CED54C /* MockSceneAssetService.swift in Sources */,
+				A721EB1C29B807E100CED54C /* SceneAssetService.swift in Sources */,
+				A76830ED29B6BF2600E93E84 /* MainView.swift in Sources */,
+				A721EB2329B80BA600CED54C /* ARViewContainer.swift in Sources */,
+				A76830EF29B6BF9800E93E84 /* MainViewModel.swift in Sources */,
 				A768314629B6C99300E93E84 /* Logging.swift in Sources */,
+				A721EB1B29B807E100CED54C /* SceneAssetViewModel.swift in Sources */,
+				A721EB2129B80A7800CED54C /* AssetPickerView.swift in Sources */,
 				A76830EB29B6BE6700E93E84 /* StringConstants.swift in Sources */,
 				A76830F329B6C05A00E93E84 /* UIViewController+Add.swift in Sources */,
 				A768314929B6CA5800E93E84 /* AppConfig.swift in Sources */,
 				A768314329B6C7FE00E93E84 /* ARConstants.swift in Sources */,
 				A76830B329B6BB1200E93E84 /* SceneDelegate.swift in Sources */,
+				A721EB1029B8005A00CED54C /* SceneAsset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
