@@ -16,9 +16,12 @@ import ARKit
 
 struct ARViewContainer: UIViewRepresentable {
     
+    // MARK: Properties
     
     var arViewModel: ARViewModel
     
+    // MARK: Lifecycle
+
     func makeUIView(context: Context) -> ARView {
         
         let arView = arViewModel.arView
@@ -40,12 +43,8 @@ struct ARViewContainer: UIViewRepresentable {
     
     class Coordinator: NSObject, ARSessionDelegate {
         
-//        func session(_ session: ARSession, didUpdate frame: ARFrame) {
-////            Logging.LogMe("...")
-//        }
-        
         func session(_ session: ARSession, didChange geoTrackingStatus: ARGeoTrackingStatus) {
-            Logging.LogMe("...")
+//            Logging.LogMe("...")
         }
     }
 
