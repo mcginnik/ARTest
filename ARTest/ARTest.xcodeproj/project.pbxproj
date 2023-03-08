@@ -31,6 +31,7 @@
 		A768314929B6CA5800E93E84 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768314829B6CA5800E93E84 /* AppConfig.swift */; };
 		A78D657229B8C58A00AF95F6 /* ARView+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78D657129B8C58A00AF95F6 /* ARView+Config.swift */; };
 		A78D657529B8C60100AF95F6 /* ARViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78D657429B8C60100AF95F6 /* ARViewModel.swift */; };
+		A78D657729B8CF7300AF95F6 /* CameraButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78D657629B8CF7300AF95F6 /* CameraButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		A768314829B6CA5800E93E84 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		A78D657129B8C58A00AF95F6 /* ARView+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARView+Config.swift"; sourceTree = "<group>"; };
 		A78D657429B8C60100AF95F6 /* ARViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewModel.swift; sourceTree = "<group>"; };
+		A78D657629B8CF7300AF95F6 /* CameraButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				A768314429B6C98B00E93E84 /* Logging */,
 				A76830F029B6C04800E93E84 /* UI */,
 				A76830E929B6BE5C00E93E84 /* Constants */,
+				A78D657629B8CF7300AF95F6 /* CameraButtonView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				A721EB2129B80A7800CED54C /* AssetPickerView.swift in Sources */,
 				A76830EB29B6BE6700E93E84 /* StringConstants.swift in Sources */,
 				A76830F329B6C05A00E93E84 /* UIViewController+Add.swift in Sources */,
+				A78D657729B8CF7300AF95F6 /* CameraButtonView.swift in Sources */,
 				A768314929B6CA5800E93E84 /* AppConfig.swift in Sources */,
 				A768314329B6C7FE00E93E84 /* ARConstants.swift in Sources */,
 				A76830B329B6BB1200E93E84 /* SceneDelegate.swift in Sources */,
@@ -645,6 +649,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARTest/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Augmented reality requires your camera...";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Enable saving AR Images to your library...";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -673,6 +678,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARTest/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Augmented reality requires your camera...";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Enable saving AR Images to your library...";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

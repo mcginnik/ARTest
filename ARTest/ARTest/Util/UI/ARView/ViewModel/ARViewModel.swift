@@ -28,6 +28,15 @@ class ARViewModel: ObservableObject {
     
     // MARK: API
     
+    func captureScene(){
+        Logging.LogMe("...")
+        arView.snapshot(saveToHDR: true) { image in
+            if let image = image {
+                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            }
+        }
+    }
+    
     func setModelForPlacement(_ model: ModelEntity?){
         self.modelForPlacement = model
     }

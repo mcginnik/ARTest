@@ -39,6 +39,11 @@ class MainViewModel: ObservableObject {
     
     // MARK: API
     
+    func didTapCameraButton() {
+        Logging.LogMe("...")
+        arViewModel.captureScene()
+    }
+    
     private func fetchAssets(){
         self.isLoading = true
         SceneAssetService.shared.fetchAssets { [weak self] res in

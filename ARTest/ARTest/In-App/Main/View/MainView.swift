@@ -32,8 +32,14 @@ struct MainView: View {
         } else {
             ZStack(alignment: .bottom) {
                 ARViewContainer(arViewModel: viewModel.arViewModel)
-                AssetPickerView(assets: $viewModel.assets,
-                                currentSelection: $viewModel.currentSelection)
+                VStack {
+                    CameraButtonView {
+                        viewModel.didTapCameraButton()
+                    }
+                    AssetPickerView(assets: $viewModel.assets,
+                                    currentSelection: $viewModel.currentSelection)
+                }
+
             }
             .ignoresSafeArea()
         }
