@@ -17,9 +17,11 @@ class MainViewModel: ObservableObject {
     
     @Published var isLoading: Bool = false
     @Published var assets: [SceneAssetViewModel] = []
-    @Published var assetSet: Set<SceneAssetViewModel> = [] {
+    @Published private var assetSet: Set<SceneAssetViewModel> = [] {
         didSet {
-            assets = Array(assetSet)
+            withAnimation {
+                self.assets = Array(assetSet)
+            }
         }
     }
 

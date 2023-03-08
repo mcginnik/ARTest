@@ -39,7 +39,6 @@ struct MainView: View {
                     AssetPickerView(assets: $viewModel.assets,
                                     currentSelection: $viewModel.currentSelection)
                 }
-
             }
             .ignoresSafeArea()
         }

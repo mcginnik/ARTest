@@ -25,6 +25,7 @@ class MockSceneAssetService: SceneAssetServiceProtocol {
     
     func fetchModelEntity(withID id: AssetID, completion: @escaping (Result<ModelEntity, Error>) -> Void) {
         Logging.LogMe("... \(id), ")
+        /// Fake delay to simulate networking
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if let asset = self.testAssets.first(where: {$0.id == id}) {
                 ModelEntity.loadModelAsync(named: asset.modelName)
