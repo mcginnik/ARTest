@@ -14,16 +14,19 @@ class ARViewModel: ObservableObject {
     
     private(set) var arView : ARView
     var clone: Bool
+    var allowTransformation: Bool
     private (set) var modelForPlacement: ModelEntity?
     
     // MARK: Lifecycle
     
     init(arView: ARView = .init(frame: .zero),
          modelForPlacement: ModelEntity?,
-         clone: Bool = true) {
+         clone: Bool = true,
+         allowTransformation: Bool  = true) {
         self.arView = arView
         self.modelForPlacement =  modelForPlacement
         self.clone = clone
+        self.allowTransformation = allowTransformation
     }
     
     // MARK: API
@@ -41,9 +44,15 @@ class ARViewModel: ObservableObject {
         self.modelForPlacement = model
     }
     
-    @objc func objPlacementFunc(sender: UITapGestureRecognizer) {
-        guard let modelForPlacement = modelForPlacement else { return }
+    @objc func placeObjectAtTapPosition(sender: UITapGestureRecognizer) {
+        
+        guard var modelForPlacement = modelForPlacement else {
+            Logging.LogMe("Failed!... modelForPlacement is nil")
+            return
+        }
+        
         let location = sender.location(in: arView)
+        
         guard let query = arView.makeRaycastQuery(from: location, allowing: .estimatedPlane, alignment: .any) else {
             Logging.LogMe("Failed!... query with location: \(location)")
             return
@@ -54,11 +63,23 @@ class ARViewModel: ObservableObject {
         }
         
         let anchorEntity = AnchorEntity(world: result.worldTransform)
+        
+        /// Adding anchor
         if clone {
-            anchorEntity.addChild(modelForPlacement.clone(recursive: true))
+            let clone = modelForPlacement.clone(recursive: true)
+            modelForPlacement = clone
+            anchorEntity.addChild(clone)
         } else {
             anchorEntity.addChild(modelForPlacement)
         }
+        
+        /// Allowing Translation Rotation and Scale
+        if allowTransformation {
+            modelForPlacement.generateCollisionShapes(recursive: true)
+            arView.installGestures([.translation, .rotation, .scale], for: modelForPlacement)
+        }
+        
+        Logging.LogMe("Success!... placed object \(modelForPlacement.name) at: \(location)")
         
         arView.scene.anchors.append(anchorEntity)
     }

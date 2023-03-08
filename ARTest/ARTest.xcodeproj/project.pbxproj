@@ -280,9 +280,9 @@
 		A76830F429B6C1FE00E93E84 /* ARView */ = {
 			isa = PBXGroup;
 			children = (
-				A78D657329B8C5F100AF95F6 /* ViewModel */,
 				A78D657029B8C57E00AF95F6 /* Extensions */,
-				A721EB2229B80BA600CED54C /* ARViewContainer.swift */,
+				A78D657829B8DDE100AF95F6 /* Controller */,
+				A78D657329B8C5F100AF95F6 /* ViewModel */,
 			);
 			path = ARView;
 			sourceTree = "<group>";
@@ -317,6 +317,14 @@
 				A78D657429B8C60100AF95F6 /* ARViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A78D657829B8DDE100AF95F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A721EB2229B80BA600CED54C /* ARViewContainer.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A7FCBE5C29B7FFDA00B7A6E4 /* Model */ = {

@@ -17,7 +17,7 @@ struct AssetPickerView: View {
             HStack(spacing: 30) {
                 ForEach(assets, id: \.id) { asset in
                     Button {
-                        print("selected: \(asset.name)")
+                        Logging.LogMe("...Selected: \(asset.name)")
                         self.currentSelection = asset
                     } label: {
                         Image(asset.imageName)

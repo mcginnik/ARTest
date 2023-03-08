@@ -22,7 +22,8 @@ struct ARViewContainer: UIViewRepresentable {
     func makeUIView(context: Context) -> ARView {
         
         let arView = arViewModel.arView
-        let tapGesture = UITapGestureRecognizer(target: arViewModel, action: #selector(arViewModel.objPlacementFunc(sender:)))
+        let tapGesture = UITapGestureRecognizer(target: arViewModel,
+                                                action: #selector(arViewModel.placeObjectAtTapPosition(sender:)))
         arView.addGestureRecognizer(tapGesture)
         
         let config = ARView.getConfig(.standard)
@@ -42,6 +43,10 @@ struct ARViewContainer: UIViewRepresentable {
 //        func session(_ session: ARSession, didUpdate frame: ARFrame) {
 ////            Logging.LogMe("...")
 //        }
+        
+        func session(_ session: ARSession, didChange geoTrackingStatus: ARGeoTrackingStatus) {
+            Logging.LogMe("...")
+        }
     }
 
 }
