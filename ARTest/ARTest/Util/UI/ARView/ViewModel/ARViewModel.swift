@@ -13,19 +13,19 @@ class ARViewModel: ObservableObject {
     // MARK: Properties
     
     private(set) var arView : ARView
-    var clone: Bool
-    var allowTransformation: Bool
     private (set) var modelForPlacement: ModelEntity?
+    var allowCloning: Bool
+    var allowTransformation: Bool
     
     // MARK: Lifecycle
     
     init(arView: ARView = .init(frame: .zero),
          modelForPlacement: ModelEntity?,
-         clone: Bool = true,
+         allowCloning: Bool = true,
          allowTransformation: Bool  = true) {
         self.arView = arView
         self.modelForPlacement =  modelForPlacement
-        self.clone = clone
+        self.allowCloning = allowCloning
         self.allowTransformation = allowTransformation
     }
     
@@ -65,7 +65,7 @@ class ARViewModel: ObservableObject {
         let anchorEntity = AnchorEntity(world: result.worldTransform)
         
         /// Adding anchor
-        if clone {
+        if allowCloning {
             let clone = modelForPlacement.clone(recursive: true)
             modelForPlacement = clone
             anchorEntity.addChild(clone)

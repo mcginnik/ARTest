@@ -10,6 +10,8 @@ import RealityKit
 
 enum ARViewConfigType {
     case standard
+    case verticalPlane
+    case horizontalPlane
     
     var config: ARWorldTrackingConfiguration {
         switch self {
@@ -20,6 +22,14 @@ enum ARViewConfigType {
             if ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh){
                 config.sceneReconstruction   = .mesh
             }
+            return config
+        case .verticalPlane:
+            let config = ARViewConfigType.standard.config
+            config.planeDetection = [.vertical]
+            return config
+        case .horizontalPlane:
+            let config = ARViewConfigType.standard.config
+            config.planeDetection = [.horizontal]
             return config
         }
     }
