@@ -259,6 +259,7 @@
 		A76830F029B6C04800E93E84 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A721EB2029B80A7800CED54C /* AssetPickerView.swift */,
 				A76830F429B6C1FE00E93E84 /* ARView */,
 				A76830F129B6C04C00E93E84 /* Extensions */,
 			);
@@ -278,7 +279,6 @@
 			children = (
 				A78D657329B8C5F100AF95F6 /* ViewModel */,
 				A78D657029B8C57E00AF95F6 /* Extensions */,
-				A721EB2029B80A7800CED54C /* AssetPickerView.swift */,
 				A721EB2229B80BA600CED54C /* ARViewContainer.swift */,
 			);
 			path = ARView;
